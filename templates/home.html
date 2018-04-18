@@ -1,0 +1,18 @@
+<section>
+        <!-- html händer här -->
+        <h1>{{name}}</h1>
+        <div class="name" ng-repeat="name in names">
+            <p>{{name}}</p>
+        </div>
+        <max></max>
+
+        <button ng-click="show()">Klicka Här!</button>
+
+        <button ng-click="showData()">Hämta Data</button>
+
+        <div ng-repeat="data in data">
+            <pre>{{data | json }}</pre>
+        </div>
+
+    </section>
+
