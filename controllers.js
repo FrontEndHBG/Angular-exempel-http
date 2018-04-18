@@ -17,6 +17,15 @@ app.controller('FirstController', ['$scope', '$http', function ($scope, $http) {
         });
     };
 
+    $scope.visaBilder = function () {
+        var url = 'http://jsonplaceholder.typicode.com/photos';
+        $http.get(url)
+        .then(function (bilder) {
+            // eftersom vad vi får tillbaka är i data array måste vi skriva så här 
+            $scope.bilder = bilder.data;
+        });
+    };
+
 
 }]);
 
